@@ -99,16 +99,25 @@ function sortFavs(arFavs) {
           target.insertBefore(el.parentNode.parentNode, target.firstChild);
           const favImg = document.createElement("img");
           favImg.src = iconurl;
+          const svg = getFavSvg();
           const svgElements = el.querySelectorAll("svg");
-          el.querySelectorAll("svg")[1].replaceWith(Object.assign(document.createElement("img"), {
-            src: iconurl,
-            style: 'width: auto; height: auto;'
-          }));
+          el.querySelectorAll("svg")[1].replaceWith(svg);
           break;
         }
       }
     }
   });
+}
+
+// renders a svg star icon
+function getFavSvg() {
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  svg.setAttribute("width", "16");
+  svg.setAttribute("height", "19");
+  svg.setAttribute("viewBox", "0 0 16 19");
+  svg.innerHTML = `<path fill="#FFD700" d="M8 0.5L9.972 5.5H15l-4 3.5 1.528 5.5L8 11.5l-4.528 3.5L5 9 1 5.5h5.028L8 0.5z"/>`;
+  return svg;
 }
 
 function saveAccountNames() {
