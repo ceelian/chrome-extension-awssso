@@ -94,7 +94,6 @@ function sortFavs(arFavs) {
         })
         accountId = accountId.toString();
         if (accountId === favid) {
-          console.warn("Found favorite account: " + favid);
           // Move the favorites account element to the beginning of the list
           target.insertBefore(el.parentNode.parentNode, target.firstChild);
           const favImg = document.createElement("img");
