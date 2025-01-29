@@ -55,6 +55,15 @@ function saveDataOnSSOAppExpansion() {
     }
     saveAccountNames();
     makeFavs();
+
+    // re-sort favorites after filter was cleared
+    let filterInput = document.querySelector('input[type="search"]');
+    filterInput.addEventListener('change', (event) => {
+        setTimeout(() => makeFavs(), 50)
+    });
+    filterInput.addEventListener('input', (event) => {
+        setTimeout(() => makeFavs(), 50)
+    });
   });
 }
 
