@@ -1,18 +1,31 @@
 # Google Chrome Extension for AWS SSO
 
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ejjegcnihofdahmbbhekhkcnpflljeej.svg)](https://chrome.google.com/webstore/detail/extension-for-aws-sso/ejjegcnihofdahmbbhekhkcnpflljeej?utm_source=github)
+This extenstion is available in the [Chrome Web Store](https://chromewebstore.google.com/detail/aws-sso-and-session-manag/kghkflhhfjghenhbfegapaeaiobjomno).
 
-[日本語の説明はこちら](https://github.com/yaggytter/chrome-extension-awssso/blob/main/README_ja.md)
+This extension is for AWS IAM Identity Center, formerly known as AWS Single Sign-On and the usage of multiple AWS accounts.<br/>
+It enriches the AWS Web Console visually.
 
-[Firefox Add-on is here](https://github.com/yaggytter/chrome-extension-awssso/tree/forfirefox)
+This extension is a fork of an extension that seems not to be maintened any longer.<br/>
+[chrome-extension-awssso](https://github.com/yaggytter/chrome-extension-awssso) by [yaggytter](https://github.com/yaggytter)
 
-This extension is for AWS IAM Identity Center (The old name is AWS SSO). As for now, this extension is providing only following functions.
-You will see what am I using Account Name and Permission Set for current console at AWS console's header, AWS console header's color will almost be red if account name has 'Production' in it, and to bring favorite accounts to the top on the SSO login page. (You can customize header colors using regular expressions for account names on the extension option page. Favorites too.)
+This extension is providing following functions:<br/>
+<ul>
+<li>
+Displaying the account name and permission set for the current console at the AWS console's header.
+</li>
+<li>
+Changing the header color to a configurable color if the account name matches a certain pattern (e.g. contains 'Production' it will color red).
+</li>
+<li>
+Brings favorite accounts to the top on the SSO login page and mark it visually.
+</li>
+</ul>
+
 
 ![ss_dev.png](screenshots/awssso.png)
-![ss_fav.png](screenshots/accountfav.jpg)
+![ss_fav.png](screenshots/accountfav.png)
 
 ## How to use
 
-You just add this extension from [chrome web store](https://chrome.google.com/webstore/detail/extension-for-aws-sso/ejjegcnihofdahmbbhekhkcnpflljeej).
+You just add this extension from [chrome web store](https://chromewebstore.google.com/detail/aws-sso-and-session-manag/kghkflhhfjghenhbfegapaeaiobjomno).
 You can also contribute to add your functions to this.
